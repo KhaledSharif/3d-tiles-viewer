@@ -1,0 +1,68 @@
+{
+  "name": "3d-tiles-renderer",
+  "version": "0.3.10",
+  "description": "https://github.com/AnalyticalGraphicsInc/3d-tiles/tree/master/specification",
+  "keywords": [
+    "3d-tiles",
+    "3dtiles",
+    "graphics",
+    "b3dm",
+    "gltf",
+    "threejs",
+    "rendering",
+    "geometry",
+    "terrain",
+    "cesium"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"parcel watch example/*.html --out-dir ./example/dev-bundle/ --public-url . --no-cache\" \"http-server\"",
+    "build-examples": "parcel build --no-content-hash example/*.html --out-dir ./example/bundle/ --public-url . --no-cache",
+    "lint": "eslint \"src/**/*.js\" \"test/**/*.js\" \"example/*.js\" && tsc -p tsconfig.json --noEmit",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NASA-AMMOS/3DTilesRendererJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NASA-AMMOS/3DTilesRendererJS/issues"
+  },
+  "homepage": "https://github.com/NASA-AMMOS/3DTilesRendererJS#readme",
+  "author": "Garrett Johnson <garrett.kjohnson@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@types/three": ">=0.128.0",
+    "babel-jest": "^25.5.1",
+    "concurrently": "^5.3.0",
+    "eslint": "^6.8.0",
+    "eslint-config-mdcs": "^4.2.3",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^25.5.4",
+    "jest-cli": "^25.5.4",
+    "parcel-bundler": "^1.12.4",
+    "static-server": "^2.2.1",
+    "three": "^0.136.0",
+    "typescript": "^3.9.9"
+  },
+  "peerDependencies": {
+    "three": ">=0.123.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-private-methods": "^7.17.12",
+    "babel-polyfill": "^6.26.0",
+    "dat.gui": "^0.7.9",
+    "http-server": "^14.0.0",
+    "path-browserify": "^1.0.1",
+    "three-mesh-ui": "^6.4.4"
+  }
+}
