@@ -8,7 +8,9 @@ The bulk of the Javascript code required to run is in:
 
 Inside you will find the following line:
 
+```
 groundTiles = new TilesRenderer('octtiles/tileset.json');
+```
 
 This line points to the 3D tiles tileset JSON file at:
 
