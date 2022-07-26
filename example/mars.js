@@ -109,7 +109,7 @@ function init() {
 	const tilesParent = new Group();
 	scene.add( tilesParent );
 
-	groundTiles = new TilesRenderer( 'octtiles/tileset.json' );
+	groundTiles = new TilesRenderer('octtiles/tileset.json');
 	groundTiles.optimizeRaycast = true;
 	groundTiles.fetchOptions.mode = 'cors';
 	groundTiles.lruCache.minSize = 4000;
