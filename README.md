@@ -31,7 +31,7 @@ npm install
 Then run the Javascript compiler:
 
 ```
-npm run
+npm start
 ```
 
 The viewer will be live at:
